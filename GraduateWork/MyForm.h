@@ -195,7 +195,6 @@ namespace GraduateWork {
 			this->groupBox4->TabIndex = 6;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Численное решение параллельного алгоритма";
-//			this->groupBox4->Enter += gcnew System::EventHandler(this, &MyForm::groupBox4_Enter);
 			// 
 			// dataGridView2
 			// 
@@ -204,7 +203,6 @@ namespace GraduateWork {
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->Size = System::Drawing::Size(840, 253);
 			this->dataGridView2->TabIndex = 1;
-//			this->dataGridView2->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView2_CellContentClick);
 			// 
 			// groupBox3
 			// 
@@ -217,7 +215,6 @@ namespace GraduateWork {
 			this->groupBox3->TabIndex = 5;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Численное решение последовательного алгоритма";
-//			this->groupBox3->Enter += gcnew System::EventHandler(this, &MyForm::groupBox3_Enter);
 			// 
 			// dataGridView1
 			// 
@@ -267,7 +264,6 @@ namespace GraduateWork {
 			this->label20->TabIndex = 25;
 			this->label20->Text = L"     ";
 			this->label20->Visible = false;
-//			this->label20->Click += gcnew System::EventHandler(this, &MyForm::label20_Click);
 			// 
 			// label19
 			// 
@@ -304,7 +300,6 @@ namespace GraduateWork {
 			this->label17->TabIndex = 22;
 			this->label17->Text = L"     ";
 			this->label17->Visible = false;
-//			this->label17->Click += gcnew System::EventHandler(this, &MyForm::label17_Click);
 			// 
 			// label16
 			// 
@@ -542,7 +537,7 @@ namespace GraduateWork {
 			this->button2->TabIndex = 11;
 			this->button2->Text = L"Запустить параллельный\r\n алгоритм";
 			this->button2->UseVisualStyleBackColor = false;
-//			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// button1
 			// 
@@ -694,7 +689,6 @@ namespace GraduateWork {
 			this->Name = L"MyForm";
 			this->Text = L"Задача Дирихле для уравнения Пуассона МСГ, последовательная и параллельная реализ"
 				L"ация";
-//			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->groupBox4->ResumeLayout(false);
@@ -903,7 +897,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 
 
-};
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	//X and Y Dimension 
@@ -1004,25 +997,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label23->Text = Convert::ToString(error);
 	label24->Text = Convert::ToString(Disc_max);
 	label25->Text = Convert::ToString(parallelruntime);
-
-
-
-
-
-
-
-
-
-
-
-}
-private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void groupBox3_Enter(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void groupBox4_Enter(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dataGridView2_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 };
-}
+
+};
