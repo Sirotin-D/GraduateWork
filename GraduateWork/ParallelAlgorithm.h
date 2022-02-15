@@ -9,8 +9,8 @@ matrix parallelCalcDiscrepancy(matrix& r, const matrix& V, double param_x, doubl
 	int i, j;
 	omp_set_num_threads(threads);
 #pragma omp parallel for private (j)
-	for (int i = 1; i < m; i++) {
-		for (int j = 1; j < n; j++) {
+	for ( i = 1; i < m; i++) {
+		for ( j = 1; j < n; j++) {
 			r[i - 1][j - 1] = V[i][j] * A + (V[i][j + 1] + V[i][j - 1]) / param_x + (V[i + 1][j] + V[i - 1][j]) / param_y + Laplas(a + j * h, c + i * k);
 		}
 	}
