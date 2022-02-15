@@ -1,4 +1,5 @@
 #pragma once
+#include "SerialAlgorithm.h"
 
 namespace GraduateWork {
 
@@ -101,6 +102,11 @@ namespace GraduateWork {
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -108,6 +114,11 @@ namespace GraduateWork {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label13 = (gcnew System::Windows::Forms::Label());
@@ -128,16 +139,6 @@ namespace GraduateWork {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->label22 = (gcnew System::Windows::Forms::Label());
-			this->label23 = (gcnew System::Windows::Forms::Label());
-			this->label24 = (gcnew System::Windows::Forms::Label());
-			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
@@ -247,11 +248,78 @@ namespace GraduateWork {
 			this->groupBox1->Text = L"Результаты работы последовательного алгоритма";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
 			// 
+			// label20
+			// 
+			this->label20->BackColor = System::Drawing::Color::RoyalBlue;
+			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label20->Location = System::Drawing::Point(166, 164);
+			this->label20->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(193, 24);
+			this->label20->TabIndex = 25;
+			this->label20->Text = L"     ";
+			this->label20->Visible = false;
+			this->label20->Click += gcnew System::EventHandler(this, &MyForm::label20_Click);
+			// 
+			// label19
+			// 
+			this->label19->BackColor = System::Drawing::Color::RoyalBlue;
+			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label19->Location = System::Drawing::Point(166, 126);
+			this->label19->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(193, 24);
+			this->label19->TabIndex = 24;
+			this->label19->Text = L"     ";
+			this->label19->Visible = false;
+			// 
+			// label18
+			// 
+			this->label18->BackColor = System::Drawing::Color::RoyalBlue;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label18->Location = System::Drawing::Point(166, 94);
+			this->label18->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(193, 24);
+			this->label18->TabIndex = 23;
+			this->label18->Text = L"     ";
+			this->label18->Visible = false;
+			// 
+			// label17
+			// 
+			this->label17->BackColor = System::Drawing::Color::RoyalBlue;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label17->Location = System::Drawing::Point(166, 59);
+			this->label17->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(193, 24);
+			this->label17->TabIndex = 22;
+			this->label17->Text = L"     ";
+			this->label17->Visible = false;
+			this->label17->Click += gcnew System::EventHandler(this, &MyForm::label17_Click);
+			// 
+			// label16
+			// 
+			this->label16->BackColor = System::Drawing::Color::RoyalBlue;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label16->Location = System::Drawing::Point(166, 26);
+			this->label16->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(193, 24);
+			this->label16->TabIndex = 21;
+			this->label16->Text = L"     ";
+			this->label16->Visible = false;
+			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label10->Location = System::Drawing::Point(6, 163);
+			this->label10->Location = System::Drawing::Point(6, 164);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(142, 15);
 			this->label10->TabIndex = 5;
@@ -261,7 +329,7 @@ namespace GraduateWork {
 			// 
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label9->Location = System::Drawing::Point(9, 126);
+			this->label9->Location = System::Drawing::Point(6, 126);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(112, 15);
 			this->label9->TabIndex = 4;
@@ -271,7 +339,7 @@ namespace GraduateWork {
 			// 
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label8->Location = System::Drawing::Point(9, 95);
+			this->label8->Location = System::Drawing::Point(6, 94);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(144, 15);
 			this->label8->TabIndex = 3;
@@ -281,7 +349,7 @@ namespace GraduateWork {
 			// 
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(6, 68);
+			this->label7->Location = System::Drawing::Point(6, 59);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(157, 15);
 			this->label7->TabIndex = 2;
@@ -291,7 +359,7 @@ namespace GraduateWork {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label6->Location = System::Drawing::Point(6, 36);
+			this->label6->Location = System::Drawing::Point(8, 26);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(117, 15);
 			this->label6->TabIndex = 1;
@@ -327,6 +395,71 @@ namespace GraduateWork {
 			this->groupBox2->TabIndex = 4;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Результаты работы параллельного алгоритма";
+			// 
+			// label25
+			// 
+			this->label25->BackColor = System::Drawing::Color::AliceBlue;
+			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label25->Location = System::Drawing::Point(163, 143);
+			this->label25->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(193, 24);
+			this->label25->TabIndex = 26;
+			this->label25->Text = L"     ";
+			this->label25->Visible = false;
+			// 
+			// label24
+			// 
+			this->label24->BackColor = System::Drawing::Color::AliceBlue;
+			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label24->Location = System::Drawing::Point(163, 113);
+			this->label24->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(193, 24);
+			this->label24->TabIndex = 25;
+			this->label24->Text = L"     ";
+			this->label24->Visible = false;
+			// 
+			// label23
+			// 
+			this->label23->BackColor = System::Drawing::Color::AliceBlue;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label23->Location = System::Drawing::Point(163, 83);
+			this->label23->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(193, 24);
+			this->label23->TabIndex = 24;
+			this->label23->Text = L"     ";
+			this->label23->Visible = false;
+			// 
+			// label22
+			// 
+			this->label22->BackColor = System::Drawing::Color::AliceBlue;
+			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label22->Location = System::Drawing::Point(163, 55);
+			this->label22->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(193, 24);
+			this->label22->TabIndex = 23;
+			this->label22->Text = L"     ";
+			this->label22->Visible = false;
+			// 
+			// label21
+			// 
+			this->label21->BackColor = System::Drawing::Color::AliceBlue;
+			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label21->Location = System::Drawing::Point(163, 27);
+			this->label21->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(193, 24);
+			this->label21->TabIndex = 22;
+			this->label21->Text = L"     ";
+			this->label21->Visible = false;
 			// 
 			// label11
 			// 
@@ -381,6 +514,7 @@ namespace GraduateWork {
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::DarkGray;
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->numericUpDown5);
@@ -395,6 +529,7 @@ namespace GraduateWork {
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(3, 6);
 			this->panel1->Name = L"panel1";
+			this->panel1->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->panel1->Size = System::Drawing::Size(367, 332);
 			this->panel1->TabIndex = 1;
 			// 
@@ -546,136 +681,6 @@ namespace GraduateWork {
 			this->tabPage2->Text = L"Трёхмерный случай";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// label16
-			// 
-			this->label16->BackColor = System::Drawing::Color::RosyBrown;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label16->Location = System::Drawing::Point(166, 27);
-			this->label16->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(193, 24);
-			this->label16->TabIndex = 21;
-			this->label16->Text = L"     ";
-			this->label16->Visible = false;
-			// 
-			// label17
-			// 
-			this->label17->BackColor = System::Drawing::Color::RosyBrown;
-			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label17->Location = System::Drawing::Point(166, 59);
-			this->label17->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(193, 24);
-			this->label17->TabIndex = 22;
-			this->label17->Text = L"     ";
-			this->label17->Visible = false;
-			// 
-			// label18
-			// 
-			this->label18->BackColor = System::Drawing::Color::RosyBrown;
-			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label18->Location = System::Drawing::Point(166, 86);
-			this->label18->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(193, 24);
-			this->label18->TabIndex = 23;
-			this->label18->Text = L"     ";
-			this->label18->Visible = false;
-			// 
-			// label19
-			// 
-			this->label19->BackColor = System::Drawing::Color::RosyBrown;
-			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label19->Location = System::Drawing::Point(166, 117);
-			this->label19->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(193, 24);
-			this->label19->TabIndex = 24;
-			this->label19->Text = L"     ";
-			this->label19->Visible = false;
-			// 
-			// label20
-			// 
-			this->label20->BackColor = System::Drawing::Color::RosyBrown;
-			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label20->Location = System::Drawing::Point(166, 154);
-			this->label20->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(193, 24);
-			this->label20->TabIndex = 25;
-			this->label20->Text = L"     ";
-			this->label20->Visible = false;
-			// 
-			// label21
-			// 
-			this->label21->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label21->Location = System::Drawing::Point(163, 27);
-			this->label21->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(193, 24);
-			this->label21->TabIndex = 22;
-			this->label21->Text = L"     ";
-			this->label21->Visible = false;
-			// 
-			// label22
-			// 
-			this->label22->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label22->Location = System::Drawing::Point(163, 55);
-			this->label22->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(193, 24);
-			this->label22->TabIndex = 23;
-			this->label22->Text = L"     ";
-			this->label22->Visible = false;
-			// 
-			// label23
-			// 
-			this->label23->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label23->Location = System::Drawing::Point(163, 83);
-			this->label23->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label23->Name = L"label23";
-			this->label23->Size = System::Drawing::Size(193, 24);
-			this->label23->TabIndex = 24;
-			this->label23->Text = L"     ";
-			this->label23->Visible = false;
-			// 
-			// label24
-			// 
-			this->label24->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label24->Location = System::Drawing::Point(163, 113);
-			this->label24->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label24->Name = L"label24";
-			this->label24->Size = System::Drawing::Size(193, 24);
-			this->label24->TabIndex = 25;
-			this->label24->Text = L"     ";
-			this->label24->Visible = false;
-			// 
-			// label25
-			// 
-			this->label25->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label25->Location = System::Drawing::Point(163, 143);
-			this->label25->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(193, 24);
-			this->label25->TabIndex = 26;
-			this->label25->Text = L"     ";
-			this->label25->Visible = false;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -715,6 +720,136 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
+
+	//X and Y Dimension 
+	size_t n = Convert::ToInt32(numericUpDown1->Text);
+	size_t m = Convert::ToInt32(numericUpDown2->Text);
+
+	// Borders
+	int a = -1, b = 1, c = -1, d = 1;
+
+
+	double h = (b - a) / (double)n;
+	double k = (d - c) / (double)m;
+
+	double param_x = -h * h;
+	double param_y = -k * k;
+	double A = -2 * (1 / param_x + 1 / param_y);
+
+	matrix V, r, H;
+	V.assign(m + 1, vector<double>(n + 1));
+	r.assign(m, vector<double>(n));
+	H.assign(m, vector<double>(n));
+
+	// filling borders:
+	for (int i = 0; i < m + 1; i++) {
+		V[i][0] = mu1(c + i * k);
+	}
+
+	for (int i = 0; i < m + 1; i++) {
+		V[i][n] = mu2(c + i * k);
+	}
+
+	for (int i = 0; i < n + 1; i++) {
+		V[0][i] = mu3(a + i * h);
+	}
+
+	for (int i = 0; i < n + 1; i++) {
+		V[m][i] = mu4(a + i * h);
+	}
+
+	
+	//iteration process:
+	double alpha, Ahh = 1;
+	int step_count = 0;
+	int max_step = Convert::ToInt32(numericUpDown3->Text);;
+	double eps = Convert::ToDouble(numericUpDown4->Text);;
+	double eps_curr = 0;
+	double accuracy = 0;
+	double v_old;
+	double runtime = clock();
+	do
+	{
+		accuracy = 0;
+		r = calcDiscreapancy(r, V, param_x, param_y, A, a, b, c, d, n, m);
+
+		alpha = calcAlpha(H, r, param_x, param_y, A, Ahh, n, m);
+		//		cout << "alpha[" << step_count << "] = " << alpha << endl;
+
+		for (int i = 1; i < m; i++) {
+			for (int j = 1; j < n; j++) {
+				v_old = V[i][j];
+				V[i][j] = v_old + alpha * H[i - 1][j - 1];
+				eps_curr = abs(V[i][j] - v_old);
+				if (eps_curr > accuracy) {
+					accuracy = eps_curr;
+				}
+			}
+		}
+
+		step_count++;
+	} while ((accuracy > eps) && (step_count < max_step));
+	runtime = (clock() - runtime) / CLOCKS_PER_SEC;
+
+	// calc final discreapancy
+	r = calcDiscreapancy(r, V, param_x, param_y, A, a, b, c, d, n, m);
+
+	double Disc_max = 0;
+	for (int i = 0; i < r.size(); i++) {
+		for (int j = 0; j < r[0].size(); j++) {
+			if (r[i][j] > Disc_max) {
+				Disc_max = r[i][j];
+			}
+		}
+	}
+
+	double error = calcError(V, h, k, a, c);
+
+	// Out 
+
+	label16->Visible = true;
+	label17->Visible = true;
+	label18->Visible = true;
+	label19->Visible = true;
+	label20->Visible = true;
+
+	label16->Text = Convert::ToString(step_count);
+	label17->Text = Convert::ToString(accuracy);
+	label18->Text = Convert::ToString(error);
+	label19->Text = Convert::ToString(Disc_max);
+	label20->Text = Convert::ToString(runtime);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+private: System::Void label17_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label20_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
