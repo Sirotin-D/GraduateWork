@@ -1,5 +1,5 @@
 #pragma once
-#include "SerialAlgorithm.h"
+#include "ParallelAlgorithm.h"
 
 namespace GraduateWork {
 
@@ -251,8 +251,7 @@ namespace GraduateWork {
 			// label20
 			// 
 			this->label20->BackColor = System::Drawing::Color::RoyalBlue;
-			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label20->Location = System::Drawing::Point(166, 164);
 			this->label20->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label20->Name = L"label20";
@@ -265,8 +264,7 @@ namespace GraduateWork {
 			// label19
 			// 
 			this->label19->BackColor = System::Drawing::Color::RoyalBlue;
-			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label19->Location = System::Drawing::Point(166, 126);
 			this->label19->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label19->Name = L"label19";
@@ -278,8 +276,7 @@ namespace GraduateWork {
 			// label18
 			// 
 			this->label18->BackColor = System::Drawing::Color::RoyalBlue;
-			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label18->Location = System::Drawing::Point(166, 94);
 			this->label18->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label18->Name = L"label18";
@@ -291,8 +288,7 @@ namespace GraduateWork {
 			// label17
 			// 
 			this->label17->BackColor = System::Drawing::Color::RoyalBlue;
-			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label17->Location = System::Drawing::Point(166, 59);
 			this->label17->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label17->Name = L"label17";
@@ -305,8 +301,7 @@ namespace GraduateWork {
 			// label16
 			// 
 			this->label16->BackColor = System::Drawing::Color::RoyalBlue;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label16->Location = System::Drawing::Point(166, 26);
 			this->label16->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label16->Name = L"label16";
@@ -399,8 +394,7 @@ namespace GraduateWork {
 			// label25
 			// 
 			this->label25->BackColor = System::Drawing::Color::AliceBlue;
-			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label25->Location = System::Drawing::Point(163, 143);
 			this->label25->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label25->Name = L"label25";
@@ -412,8 +406,7 @@ namespace GraduateWork {
 			// label24
 			// 
 			this->label24->BackColor = System::Drawing::Color::AliceBlue;
-			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label24->Location = System::Drawing::Point(163, 113);
 			this->label24->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label24->Name = L"label24";
@@ -425,8 +418,7 @@ namespace GraduateWork {
 			// label23
 			// 
 			this->label23->BackColor = System::Drawing::Color::AliceBlue;
-			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label23->Location = System::Drawing::Point(163, 83);
 			this->label23->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label23->Name = L"label23";
@@ -438,8 +430,7 @@ namespace GraduateWork {
 			// label22
 			// 
 			this->label22->BackColor = System::Drawing::Color::AliceBlue;
-			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label22->Location = System::Drawing::Point(163, 55);
 			this->label22->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label22->Name = L"label22";
@@ -451,8 +442,7 @@ namespace GraduateWork {
 			// label21
 			// 
 			this->label21->BackColor = System::Drawing::Color::AliceBlue;
-			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->label21->Location = System::Drawing::Point(163, 27);
 			this->label21->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
 			this->label21->Name = L"label21";
@@ -465,7 +455,7 @@ namespace GraduateWork {
 			// 
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label11->Location = System::Drawing::Point(6, 152);
+			this->label11->Location = System::Drawing::Point(5, 143);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(142, 15);
 			this->label11->TabIndex = 5;
@@ -475,7 +465,7 @@ namespace GraduateWork {
 			// 
 			this->label12->AutoSize = true;
 			this->label12->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label12->Location = System::Drawing::Point(6, 122);
+			this->label12->Location = System::Drawing::Point(6, 113);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(112, 15);
 			this->label12->TabIndex = 4;
@@ -485,7 +475,7 @@ namespace GraduateWork {
 			// 
 			this->label13->AutoSize = true;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label13->Location = System::Drawing::Point(7, 92);
+			this->label13->Location = System::Drawing::Point(5, 83);
 			this->label13->Name = L"label13";
 			this->label13->Size = System::Drawing::Size(144, 15);
 			this->label13->TabIndex = 3;
@@ -495,7 +485,7 @@ namespace GraduateWork {
 			// 
 			this->label14->AutoSize = true;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label14->Location = System::Drawing::Point(6, 64);
+			this->label14->Location = System::Drawing::Point(5, 55);
 			this->label14->Name = L"label14";
 			this->label14->Size = System::Drawing::Size(157, 15);
 			this->label14->TabIndex = 2;
@@ -505,7 +495,7 @@ namespace GraduateWork {
 			// 
 			this->label15->AutoSize = true;
 			this->label15->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label15->Location = System::Drawing::Point(6, 36);
+			this->label15->Location = System::Drawing::Point(7, 27);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(117, 15);
 			this->label15->TabIndex = 1;
@@ -544,6 +534,7 @@ namespace GraduateWork {
 			this->button2->TabIndex = 11;
 			this->button2->Text = L"Запустить параллельный\r\n алгоритм";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// button1
 			// 
@@ -560,13 +551,14 @@ namespace GraduateWork {
 			// 
 			// numericUpDown5
 			// 
+			this->numericUpDown5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->numericUpDown5->Location = System::Drawing::Point(248, 172);
 			this->numericUpDown5->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 8, 0, 0, 0 });
 			this->numericUpDown5->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown5->Name = L"numericUpDown5";
-			this->numericUpDown5->Size = System::Drawing::Size(102, 20);
+			this->numericUpDown5->Size = System::Drawing::Size(102, 21);
 			this->numericUpDown5->TabIndex = 9;
-			this->numericUpDown5->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDown5->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
 			// 
 			// label5
 			// 
@@ -581,44 +573,48 @@ namespace GraduateWork {
 			// numericUpDown4
 			// 
 			this->numericUpDown4->DecimalPlaces = 8;
+			this->numericUpDown4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->numericUpDown4->Location = System::Drawing::Point(201, 119);
 			this->numericUpDown4->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 327680 });
 			this->numericUpDown4->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 983040 });
 			this->numericUpDown4->Name = L"numericUpDown4";
-			this->numericUpDown4->Size = System::Drawing::Size(149, 20);
+			this->numericUpDown4->Size = System::Drawing::Size(149, 21);
 			this->numericUpDown4->TabIndex = 7;
 			this->numericUpDown4->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 524288 });
 			// 
 			// numericUpDown3
 			// 
+			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->numericUpDown3->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
-			this->numericUpDown3->Location = System::Drawing::Point(201, 87);
+			this->numericUpDown3->Location = System::Drawing::Point(201, 86);
 			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 30000, 0, 0, 0 });
 			this->numericUpDown3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 50, 0, 0, 0 });
 			this->numericUpDown3->Name = L"numericUpDown3";
-			this->numericUpDown3->Size = System::Drawing::Size(149, 20);
+			this->numericUpDown3->Size = System::Drawing::Size(149, 21);
 			this->numericUpDown3->TabIndex = 6;
 			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
 			// 
 			// numericUpDown2
 			// 
+			this->numericUpDown2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->numericUpDown2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numericUpDown2->Location = System::Drawing::Point(201, 50);
 			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
 			this->numericUpDown2->Name = L"numericUpDown2";
-			this->numericUpDown2->Size = System::Drawing::Size(149, 20);
+			this->numericUpDown2->Size = System::Drawing::Size(149, 21);
 			this->numericUpDown2->TabIndex = 5;
 			this->numericUpDown2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
 			// 
 			// numericUpDown1
 			// 
+			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->numericUpDown1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numericUpDown1->Location = System::Drawing::Point(201, 19);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(149, 20);
+			this->numericUpDown1->Size = System::Drawing::Size(149, 21);
 			this->numericUpDown1->TabIndex = 4;
 			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
 			// 
@@ -636,7 +632,7 @@ namespace GraduateWork {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label3->Location = System::Drawing::Point(14, 77);
+			this->label3->Location = System::Drawing::Point(14, 86);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(155, 30);
 			this->label3->TabIndex = 2;
@@ -820,7 +816,17 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	label20->Text = Convert::ToString(runtime);
 
 
-
+	// Сreate a chart
+	double v_new;
+	ofstream outfile("out.txt");
+	for (int i = 0; i < n + 1; i++)
+		for (int j = 0; j < n + 1; j++) {
+			v_new = V[i][j];
+			double p = a + i * h;
+			double e = c + j * k;
+			outfile << p << "\t" << e << "\t" << v_new << "\n";
+		}
+	system("python show_plot.py");
 
 
 
@@ -850,6 +856,118 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void label17_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label20_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//X and Y Dimension 
+	size_t n = Convert::ToInt32(numericUpDown1->Text);
+	size_t m = Convert::ToInt32(numericUpDown2->Text);
+
+	// Borders
+	int a = -1, b = 1, c = -1, d = 1;
+
+
+	double h = (b - a) / (double)n;
+	double k = (d - c) / (double)m;
+
+	double param_x = -h * h;
+	double param_y = -k * k;
+	double A = -2 * (1 / param_x + 1 / param_y);
+
+	matrix V, r, H;
+	V.assign(m + 1, vector<double>(n + 1));
+	r.assign(m, vector<double>(n));
+	H.assign(m, vector<double>(n));
+
+	// filling borders:
+	for (int i = 0; i < m + 1; i++) {
+		V[i][0] = mu1(c + i * k);
+	}
+
+	for (int i = 0; i < m + 1; i++) {
+		V[i][n] = mu2(c + i * k);
+	}
+
+	for (int i = 0; i < n + 1; i++) {
+		V[0][i] = mu3(a + i * h);
+	}
+
+	for (int i = 0; i < n + 1; i++) {
+		V[m][i] = mu4(a + i * h);
+	}
+
+
+	//iteration process:
+	double alpha, Ahh = 1;
+	int step_count = 0;
+	int max_step = Convert::ToInt32(numericUpDown3->Text);
+	double eps = Convert::ToDouble(numericUpDown4->Text);
+	double eps_curr = 0;
+	double accuracy = 0;
+	double v_old;
+	size_t num_threads = Convert::ToInt32(numericUpDown5->Text);
+	double parallelruntime = omp_get_wtime();
+	do
+	{
+		accuracy = 0;
+		r = parallelCalcDiscrepancy(r, V, param_x, param_y, A, a, b, c, d, n, m, num_threads);
+
+		alpha = parallelCalcAlpha(H, r, param_x, param_y, A, Ahh, n, m, num_threads);
+		//		cout << "alpha[" << step_count << "] = " << alpha << endl;
+
+		for (int i = 1; i < m; i++) {
+			for (int j = 1; j < n; j++) {
+				v_old = V[i][j];
+				V[i][j] = v_old + alpha * H[i - 1][j - 1];
+				eps_curr = abs(V[i][j] - v_old);
+				if (eps_curr > accuracy) {
+					accuracy = eps_curr;
+				}
+			}
+		}
+
+		step_count++;
+	} while ((accuracy > eps) && (step_count < max_step));
+	parallelruntime = omp_get_wtime() - parallelruntime;
+
+	// calc final discreapancy
+	r = parallelCalcDiscrepancy(r, V, param_x, param_y, A, a, b, c, d, n, m, num_threads);
+
+	double Disc_max = 0;
+	for (int i = 0; i < r.size(); i++) {
+		for (int j = 0; j < r[0].size(); j++) {
+			if (r[i][j] > Disc_max) {
+				Disc_max = r[i][j];
+			}
+		}
+	}
+
+	double error = calcError(V, h, k, a, c);
+
+	// Out 
+
+	label21->Visible = true;
+	label22->Visible = true;
+	label23->Visible = true;
+	label24->Visible = true;
+	label25->Visible = true;
+
+	label21->Text = Convert::ToString(step_count);
+	label22->Text = Convert::ToString(accuracy);
+	label23->Text = Convert::ToString(error);
+	label24->Text = Convert::ToString(Disc_max);
+	label25->Text = Convert::ToString(parallelruntime);
+
+
+
+
+
+
+
+
+
+
+
 }
 };
 }
