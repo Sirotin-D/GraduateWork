@@ -69,6 +69,16 @@ namespace GraduateWork {
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::Label^ label20;
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::Label^ label18;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Label^ label25;
+	private: System::Windows::Forms::Label^ label24;
+	private: System::Windows::Forms::Label^ label23;
+	private: System::Windows::Forms::Label^ label22;
+	private: System::Windows::Forms::Label^ label21;
 
 	private:
 		/// <summary>
@@ -86,8 +96,23 @@ namespace GraduateWork {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -103,25 +128,25 @@ namespace GraduateWork {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
+			this->groupBox4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			this->groupBox3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->panel2->SuspendLayout();
+			this->groupBox2->SuspendLayout();
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
@@ -129,11 +154,6 @@ namespace GraduateWork {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			this->groupBox2->SuspendLayout();
-			this->groupBox3->SuspendLayout();
-			this->groupBox4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -163,9 +183,55 @@ namespace GraduateWork {
 			this->tabPage1->Text = L"Двумерный случай";
 			this->tabPage1->Click += gcnew System::EventHandler(this, &MyForm::tabPage1_Click);
 			// 
+			// groupBox4
+			// 
+			this->groupBox4->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->groupBox4->Controls->Add(this->dataGridView2);
+			this->groupBox4->Font = (gcnew System::Drawing::Font(L"Georgia", 10, System::Drawing::FontStyle::Bold));
+			this->groupBox4->Location = System::Drawing::Point(406, 439);
+			this->groupBox4->Name = L"groupBox4";
+			this->groupBox4->Size = System::Drawing::Size(609, 291);
+			this->groupBox4->TabIndex = 6;
+			this->groupBox4->TabStop = false;
+			this->groupBox4->Text = L"Численное решение параллельного алгоритма";
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(6, 31);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->Size = System::Drawing::Size(596, 253);
+			this->dataGridView2->TabIndex = 1;
+			// 
+			// groupBox3
+			// 
+			this->groupBox3->BackColor = System::Drawing::Color::RosyBrown;
+			this->groupBox3->Controls->Add(this->dataGridView1);
+			this->groupBox3->Font = (gcnew System::Drawing::Font(L"Georgia", 10, System::Drawing::FontStyle::Bold));
+			this->groupBox3->Location = System::Drawing::Point(406, 178);
+			this->groupBox3->Name = L"groupBox3";
+			this->groupBox3->Size = System::Drawing::Size(609, 255);
+			this->groupBox3->TabIndex = 5;
+			this->groupBox3->TabStop = false;
+			this->groupBox3->Text = L"Численное решение последовательного алгоритма";
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(0, 21);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(596, 228);
+			this->dataGridView1->TabIndex = 0;
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
+			// 
 			// groupBox1
 			// 
 			this->groupBox1->BackColor = System::Drawing::Color::RosyBrown;
+			this->groupBox1->Controls->Add(this->label20);
+			this->groupBox1->Controls->Add(this->label19);
+			this->groupBox1->Controls->Add(this->label18);
+			this->groupBox1->Controls->Add(this->label17);
+			this->groupBox1->Controls->Add(this->label16);
 			this->groupBox1->Controls->Add(this->label10);
 			this->groupBox1->Controls->Add(this->label9);
 			this->groupBox1->Controls->Add(this->label8);
@@ -175,11 +241,61 @@ namespace GraduateWork {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
 			this->groupBox1->Location = System::Drawing::Point(3, 344);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(367, 177);
+			this->groupBox1->Size = System::Drawing::Size(367, 196);
 			this->groupBox1->TabIndex = 3;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Результаты работы последовательного алгоритма";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label10->Location = System::Drawing::Point(6, 163);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(142, 15);
+			this->label10->TabIndex = 5;
+			this->label10->Text = L"Время выполнения";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label9->Location = System::Drawing::Point(9, 126);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(112, 15);
+			this->label9->TabIndex = 4;
+			this->label9->Text = L"Норма невязки";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label8->Location = System::Drawing::Point(9, 95);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(144, 15);
+			this->label8->TabIndex = 3;
+			this->label8->Text = L"Погрешность схемы";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label7->Location = System::Drawing::Point(6, 68);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(157, 15);
+			this->label7->TabIndex = 2;
+			this->label7->Text = L"Достигнутая точность";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label6->Location = System::Drawing::Point(6, 36);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(117, 15);
+			this->label6->TabIndex = 1;
+			this->label6->Text = L"Число итераций";
 			// 
 			// panel2
 			// 
@@ -189,6 +305,78 @@ namespace GraduateWork {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(367, 376);
 			this->panel2->TabIndex = 2;
+			// 
+			// groupBox2
+			// 
+			this->groupBox2->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->groupBox2->Controls->Add(this->label25);
+			this->groupBox2->Controls->Add(this->label24);
+			this->groupBox2->Controls->Add(this->label23);
+			this->groupBox2->Controls->Add(this->label22);
+			this->groupBox2->Controls->Add(this->label21);
+			this->groupBox2->Controls->Add(this->label11);
+			this->groupBox2->Controls->Add(this->label12);
+			this->groupBox2->Controls->Add(this->label13);
+			this->groupBox2->Controls->Add(this->label14);
+			this->groupBox2->Controls->Add(this->label15);
+			this->groupBox2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->groupBox2->Location = System::Drawing::Point(3, 192);
+			this->groupBox2->Name = L"groupBox2";
+			this->groupBox2->Size = System::Drawing::Size(367, 177);
+			this->groupBox2->TabIndex = 4;
+			this->groupBox2->TabStop = false;
+			this->groupBox2->Text = L"Результаты работы параллельного алгоритма";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label11->Location = System::Drawing::Point(6, 152);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(142, 15);
+			this->label11->TabIndex = 5;
+			this->label11->Text = L"Время выполнения";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label12->Location = System::Drawing::Point(6, 122);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(112, 15);
+			this->label12->TabIndex = 4;
+			this->label12->Text = L"Норма невязки";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label13->Location = System::Drawing::Point(7, 92);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(144, 15);
+			this->label13->TabIndex = 3;
+			this->label13->Text = L"Погрешность схемы";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label14->Location = System::Drawing::Point(6, 64);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(157, 15);
+			this->label14->TabIndex = 2;
+			this->label14->Text = L"Достигнутая точность";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label15->Location = System::Drawing::Point(6, 36);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(117, 15);
+			this->label15->TabIndex = 1;
+			this->label15->Text = L"Число итераций";
 			// 
 			// panel1
 			// 
@@ -233,6 +421,7 @@ namespace GraduateWork {
 			this->button1->TabIndex = 10;
 			this->button1->Text = L"Запустить последовательный алгоритм";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// numericUpDown5
 			// 
@@ -352,168 +541,140 @@ namespace GraduateWork {
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1150, 709);
+			this->tabPage2->Size = System::Drawing::Size(1052, 743);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Трёхмерный случай";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// label6
+			// label16
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label6->Location = System::Drawing::Point(6, 36);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(117, 15);
-			this->label6->TabIndex = 1;
-			this->label6->Text = L"Число итераций";
+			this->label16->BackColor = System::Drawing::Color::RosyBrown;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label16->Location = System::Drawing::Point(166, 27);
+			this->label16->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(193, 24);
+			this->label16->TabIndex = 21;
+			this->label16->Text = L"     ";
+			this->label16->Visible = false;
 			// 
-			// label7
+			// label17
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(6, 64);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(157, 15);
-			this->label7->TabIndex = 2;
-			this->label7->Text = L"Достигнутая точность";
+			this->label17->BackColor = System::Drawing::Color::RosyBrown;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label17->Location = System::Drawing::Point(166, 59);
+			this->label17->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(193, 24);
+			this->label17->TabIndex = 22;
+			this->label17->Text = L"     ";
+			this->label17->Visible = false;
 			// 
-			// label8
+			// label18
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label8->Location = System::Drawing::Point(7, 92);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(144, 15);
-			this->label8->TabIndex = 3;
-			this->label8->Text = L"Погрешность схемы";
+			this->label18->BackColor = System::Drawing::Color::RosyBrown;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label18->Location = System::Drawing::Point(166, 86);
+			this->label18->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(193, 24);
+			this->label18->TabIndex = 23;
+			this->label18->Text = L"     ";
+			this->label18->Visible = false;
 			// 
-			// label9
+			// label19
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label9->Location = System::Drawing::Point(6, 122);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(112, 15);
-			this->label9->TabIndex = 4;
-			this->label9->Text = L"Норма невязки";
+			this->label19->BackColor = System::Drawing::Color::RosyBrown;
+			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label19->Location = System::Drawing::Point(166, 117);
+			this->label19->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(193, 24);
+			this->label19->TabIndex = 24;
+			this->label19->Text = L"     ";
+			this->label19->Visible = false;
 			// 
-			// label10
+			// label20
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label10->Location = System::Drawing::Point(6, 152);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(142, 15);
-			this->label10->TabIndex = 5;
-			this->label10->Text = L"Время выполнения";
+			this->label20->BackColor = System::Drawing::Color::RosyBrown;
+			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label20->Location = System::Drawing::Point(166, 154);
+			this->label20->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(193, 24);
+			this->label20->TabIndex = 25;
+			this->label20->Text = L"     ";
+			this->label20->Visible = false;
 			// 
-			// groupBox2
+			// label21
 			// 
-			this->groupBox2->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->groupBox2->Controls->Add(this->label11);
-			this->groupBox2->Controls->Add(this->label12);
-			this->groupBox2->Controls->Add(this->label13);
-			this->groupBox2->Controls->Add(this->label14);
-			this->groupBox2->Controls->Add(this->label15);
-			this->groupBox2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->groupBox2->Location = System::Drawing::Point(0, 173);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(367, 177);
-			this->groupBox2->TabIndex = 4;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Результаты работы параллельного алгоритма";
+			this->label21->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label21->Location = System::Drawing::Point(163, 27);
+			this->label21->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(193, 24);
+			this->label21->TabIndex = 22;
+			this->label21->Text = L"     ";
+			this->label21->Visible = false;
 			// 
-			// label11
+			// label22
 			// 
-			this->label11->AutoSize = true;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label11->Location = System::Drawing::Point(6, 152);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(142, 15);
-			this->label11->TabIndex = 5;
-			this->label11->Text = L"Время выполнения";
+			this->label22->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label22->Location = System::Drawing::Point(163, 55);
+			this->label22->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(193, 24);
+			this->label22->TabIndex = 23;
+			this->label22->Text = L"     ";
+			this->label22->Visible = false;
 			// 
-			// label12
+			// label23
 			// 
-			this->label12->AutoSize = true;
-			this->label12->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label12->Location = System::Drawing::Point(6, 122);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(112, 15);
-			this->label12->TabIndex = 4;
-			this->label12->Text = L"Норма невязки";
+			this->label23->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label23->Location = System::Drawing::Point(163, 83);
+			this->label23->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(193, 24);
+			this->label23->TabIndex = 24;
+			this->label23->Text = L"     ";
+			this->label23->Visible = false;
 			// 
-			// label13
+			// label24
 			// 
-			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label13->Location = System::Drawing::Point(7, 92);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(144, 15);
-			this->label13->TabIndex = 3;
-			this->label13->Text = L"Погрешность схемы";
+			this->label24->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label24->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label24->Location = System::Drawing::Point(163, 113);
+			this->label24->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(193, 24);
+			this->label24->TabIndex = 25;
+			this->label24->Text = L"     ";
+			this->label24->Visible = false;
 			// 
-			// label14
+			// label25
 			// 
-			this->label14->AutoSize = true;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label14->Location = System::Drawing::Point(6, 64);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(157, 15);
-			this->label14->TabIndex = 2;
-			this->label14->Text = L"Достигнутая точность";
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label15->Location = System::Drawing::Point(6, 36);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(117, 15);
-			this->label15->TabIndex = 1;
-			this->label15->Text = L"Число итераций";
-			// 
-			// groupBox3
-			// 
-			this->groupBox3->BackColor = System::Drawing::Color::RosyBrown;
-			this->groupBox3->Controls->Add(this->dataGridView1);
-			this->groupBox3->Font = (gcnew System::Drawing::Font(L"Georgia", 10, System::Drawing::FontStyle::Bold));
-			this->groupBox3->Location = System::Drawing::Point(406, 178);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(609, 255);
-			this->groupBox3->TabIndex = 5;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Численное решение последовательного алгоритма";
-			// 
-			// groupBox4
-			// 
-			this->groupBox4->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->groupBox4->Controls->Add(this->dataGridView2);
-			this->groupBox4->Font = (gcnew System::Drawing::Font(L"Georgia", 10, System::Drawing::FontStyle::Bold));
-			this->groupBox4->Location = System::Drawing::Point(406, 439);
-			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(609, 291);
-			this->groupBox4->TabIndex = 6;
-			this->groupBox4->TabStop = false;
-			this->groupBox4->Text = L"Численное решение параллельного алгоритма";
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Location = System::Drawing::Point(7, 21);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(596, 228);
-			this->dataGridView1->TabIndex = 0;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
-			// 
-			// dataGridView2
-			// 
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->Location = System::Drawing::Point(6, 31);
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->Size = System::Drawing::Size(596, 253);
-			this->dataGridView2->TabIndex = 1;
+			this->label25->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label25->Location = System::Drawing::Point(163, 143);
+			this->label25->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(193, 24);
+			this->label25->TabIndex = 26;
+			this->label25->Text = L"     ";
+			this->label25->Visible = false;
 			// 
 			// MyForm
 			// 
@@ -525,9 +686,15 @@ namespace GraduateWork {
 			this->Text = L"Dirichle task conjugate gradients";
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
+			this->groupBox4->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			this->groupBox3->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			this->panel2->ResumeLayout(false);
+			this->groupBox2->ResumeLayout(false);
+			this->groupBox2->PerformLayout();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
@@ -536,12 +703,6 @@ namespace GraduateWork {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
-			this->groupBox4->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -551,6 +712,9 @@ namespace GraduateWork {
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
 }
 };
 }
