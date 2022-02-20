@@ -199,6 +199,7 @@ namespace GraduateWork {
 			// dataGridView2
 			// 
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
 			this->dataGridView2->Location = System::Drawing::Point(13, 31);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->Size = System::Drawing::Size(840, 253);
@@ -997,6 +998,30 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	label23->Text = Convert::ToString(error);
 	label24->Text = Convert::ToString(Disc_max);
 	label25->Text = Convert::ToString(parallelruntime);
+
+	dataGridView2->Rows->Clear();
+	dataGridView2->RowCount = m + 2;
+	dataGridView2->ColumnCount = n + 3;
+	dataGridView2->RowHeadersVisible = false;
+	for (int i = n, col = 2; i >= 0; i--, col++) {
+		dataGridView2->Columns[col]->HeaderText = Convert::ToString(n - i);
+		dataGridView2->Rows[0]->Cells[i + 2]->Value = ceil((a + i * h) * 1000) / 1000;
+	}
+
+	for (int i = m, row = 1; i >= 0; i--, row++) {
+		dataGridView2->Rows[row]->Cells[0]->Value = i;
+		dataGridView2->Rows[row]->Cells[1]->Value = ceil((c + i * k) * 1000) / 1000;
+	}
+
+	dataGridView2->Rows[0]->Cells[0]->Value = Convert::ToString("j");
+	dataGridView2->Columns[1]->HeaderText = Convert::ToString("i");
+	dataGridView2->Rows[0]->Cells[1]->Value = Convert::ToString("Y / X");
+
+	for (int i = m + 1, k = 0; i > 0; i--, k++) {
+		for (int j = 2, p = 0; j < n + 3; j++, p++) {
+			dataGridView2->Rows[i]->Cells[j]->Value = ceil(V[k][p] * 1000) / 1000;
+		}
+	}
 }
 };
 
