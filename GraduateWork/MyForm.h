@@ -610,7 +610,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		r = calcDiscreapancy(r, V, param_x, param_y, A, a, b, c, d, n, m);
 
 		alpha = calcAlpha(H, r, param_x, param_y, A, Ahh, n, m);
-		//		cout << "alpha[" << step_count << "] = " << alpha << endl;
 
 		for (int i = 1; i < m; i++) {
 			for (int j = 1; j < n; j++) {
