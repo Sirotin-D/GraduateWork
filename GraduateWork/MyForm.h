@@ -93,6 +93,12 @@ namespace GraduateWork {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::GroupBox^ groupBox6;
+	private: System::Windows::Forms::GroupBox^ groupBox5;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ button5;
 
 
 
@@ -125,6 +131,8 @@ namespace GraduateWork {
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
@@ -162,6 +170,10 @@ namespace GraduateWork {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
@@ -178,6 +190,8 @@ namespace GraduateWork {
 			this->panel2->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			this->groupBox5->SuspendLayout();
+			this->groupBox6->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -244,8 +258,8 @@ namespace GraduateWork {
 			// 
 			this->panel1->BackColor = System::Drawing::Color::LightGray;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->panel1->Controls->Add(this->button2);
-			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->groupBox6);
+			this->panel1->Controls->Add(this->groupBox5);
 			this->panel1->Controls->Add(this->numericUpDown5);
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->label5);
@@ -259,6 +273,21 @@ namespace GraduateWork {
 			this->panel1->Controls->Add(this->label1);
 			resources->ApplyResources(this->panel1, L"panel1");
 			this->panel1->Name = L"panel1";
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button4, L"button4");
+			this->button4->Name = L"button4";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button3, L"button3");
+			this->button3->Name = L"button3";
+			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
@@ -513,6 +542,40 @@ namespace GraduateWork {
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
+			// groupBox5
+			// 
+			this->groupBox5->BackColor = System::Drawing::Color::RosyBrown;
+			this->groupBox5->Controls->Add(this->button1);
+			this->groupBox5->Controls->Add(this->button3);
+			this->groupBox5->Controls->Add(this->button4);
+			resources->ApplyResources(this->groupBox5, L"groupBox5");
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->TabStop = false;
+			// 
+			// groupBox6
+			// 
+			this->groupBox6->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->groupBox6->Controls->Add(this->button6);
+			this->groupBox6->Controls->Add(this->button5);
+			this->groupBox6->Controls->Add(this->button2);
+			resources->ApplyResources(this->groupBox6, L"groupBox6");
+			this->groupBox6->Name = L"groupBox6";
+			this->groupBox6->TabStop = false;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button5, L"button5");
+			this->button5->Name = L"button5";
+			this->button5->UseVisualStyleBackColor = false;
+			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button6, L"button6");
+			this->button6->Name = L"button6";
+			this->button6->UseVisualStyleBackColor = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -544,6 +607,8 @@ namespace GraduateWork {
 			this->groupBox2->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox6->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -685,17 +750,17 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	dataGridView1->RowHeadersVisible = false;
 	for (int i = n, col = 2; i >= 0; i--, col++) {
 		dataGridView1->Columns[col]->HeaderText = Convert::ToString(n - i);
-		dataGridView1->Rows[0]->Cells[i + 2]->Value = ceil((a+ i*h) * 1000) / 1000;
+		dataGridView1->Rows[0]->Cells[i + 2]->Value = floor((a+ i*h) * 1000) / 1000;
 	}
 
 	for (int i = m, row = 1; i >= 0; i--, row++) {
 		dataGridView1->Rows[row]->Cells[0]->Value = i;
-		dataGridView1->Rows[row]->Cells[1]->Value = ceil((c+i*k) * 1000) / 1000;
+		dataGridView1->Rows[row]->Cells[1]->Value = floor((c+i*k) * 1000) / 1000;
 	}
 
 	dataGridView1->Rows[0]->Cells[0]->Value = Convert::ToString("j");
 	dataGridView1->Columns[1]->HeaderText = Convert::ToString("i");
-	dataGridView1->Rows[0]->Cells[1]->Value = Convert::ToString("Y / X");
+	dataGridView1->Rows[0]->Cells[1]->Value = Convert::ToString("y / x");
 
 	for (int i = m + 1, k = 0; i > 0; i--, k++) {
 		for (int j = 2, p = 0; j < n + 3; j++, p++) {
@@ -717,7 +782,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			double e = c + j * k;
 			outfile << p << "\t" << e << "\t" << v_new << "\n";
 		}
-	system("python show_plot.py");
+	
 */
 
 
@@ -840,17 +905,17 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	dataGridView2->RowHeadersVisible = false;
 	for (int i = n, col = 2; i >= 0; i--, col++) {
 		dataGridView2->Columns[col]->HeaderText = Convert::ToString(n - i);
-		dataGridView2->Rows[0]->Cells[i + 2]->Value = ceil((a + i * h) * 1000) / 1000;
+		dataGridView2->Rows[0]->Cells[i + 2]->Value = floor((a + i * h) * 1000) / 1000;
 	}
 
 	for (int i = m, row = 1; i >= 0; i--, row++) {
 		dataGridView2->Rows[row]->Cells[0]->Value = i;
-		dataGridView2->Rows[row]->Cells[1]->Value = ceil((c + i * k) * 1000) / 1000;
+		dataGridView2->Rows[row]->Cells[1]->Value = floor((c + i * k) * 1000) / 1000;
 	}
 
 	dataGridView2->Rows[0]->Cells[0]->Value = Convert::ToString("j");
 	dataGridView2->Columns[1]->HeaderText = Convert::ToString("i");
-	dataGridView2->Rows[0]->Cells[1]->Value = Convert::ToString("Y / X");
+	dataGridView2->Rows[0]->Cells[1]->Value = Convert::ToString("y / x");
 
 	for (int i = m + 1, k = 0; i > 0; i--, k++) {
 		for (int j = 2, p = 0; j < n + 3; j++, p++) {
@@ -859,6 +924,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	system("python show_plot.py");
 }
 };
 

@@ -54,6 +54,7 @@ matrix calcDiscreapancy(matrix& r, const matrix& V, double param_x, double param
 	return r;
 }
 
+
 matrix calcAh(matrix& H, matrix& r, double A, double param_x, double param_y, size_t n, size_t m) {
 	matrix Ah;
 	Ah.assign(m, vector<double>(n));
@@ -67,9 +68,15 @@ matrix calcAh(matrix& H, matrix& r, double A, double param_x, double param_y, si
 
 double calcAhh(matrix& Ah, matrix& r) {
 	double temp = 0;
+	/*
 	for (int i = 1; i < r.size(); i++) {
 		for (int j = 1; j < r[0].size(); j++) {
 			temp += Ah[i - 1][j - 1] * r[i - 1][j - 1];// (Ah,h)
+		}
+	}*/
+	for (int i = 0; i < r.size(); i++) {
+		for (int j = 0; j < r[0].size(); j++) {
+			temp += Ah[i][j] * r[i][j];// (Ah,h)
 		}
 	}
 	return temp;
