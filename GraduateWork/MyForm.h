@@ -182,52 +182,51 @@ namespace GraduateWork {
 			// 
 			// tabControl1
 			// 
-			resources->ApplyResources(this->tabControl1, L"tabControl1");
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
+			resources->ApplyResources(this->tabControl1, L"tabControl1");
 			this->tabControl1->Multiline = true;
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			// 
 			// tabPage1
 			// 
-			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->BackColor = System::Drawing::SystemColors::Control;
 			this->tabPage1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tabPage1->Controls->Add(this->groupBox4);
 			this->tabPage1->Controls->Add(this->groupBox3);
 			this->tabPage1->Controls->Add(this->panel1);
 			this->tabPage1->Controls->Add(this->panel2);
+			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Click += gcnew System::EventHandler(this, &MyForm::tabPage1_Click);
 			// 
 			// groupBox4
 			// 
-			resources->ApplyResources(this->groupBox4, L"groupBox4");
 			this->groupBox4->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->groupBox4->Controls->Add(this->dataGridView2);
+			resources->ApplyResources(this->groupBox4, L"groupBox4");
 			this->groupBox4->Name = L"groupBox4";
 			this->groupBox4->TabStop = false;
 			// 
 			// dataGridView2
 			// 
-			resources->ApplyResources(this->dataGridView2, L"dataGridView2");
 			this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
 			this->dataGridView2->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			resources->ApplyResources(this->dataGridView2, L"dataGridView2");
 			this->dataGridView2->Name = L"dataGridView2";
 			// 
 			// groupBox3
 			// 
-			resources->ApplyResources(this->groupBox3, L"groupBox3");
 			this->groupBox3->BackColor = System::Drawing::Color::RosyBrown;
 			this->groupBox3->Controls->Add(this->dataGridView1);
+			resources->ApplyResources(this->groupBox3, L"groupBox3");
 			this->groupBox3->Name = L"groupBox3";
 			this->groupBox3->TabStop = false;
 			// 
 			// dataGridView1
 			// 
-			resources->ApplyResources(this->dataGridView1, L"dataGridView1");
 			this->dataGridView1->AllowUserToAddRows = false;
 			this->dataGridView1->AllowUserToDeleteRows = false;
 			this->dataGridView1->AllowUserToResizeColumns = false;
@@ -236,13 +235,13 @@ namespace GraduateWork {
 			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->dataGridView1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			resources->ApplyResources(this->dataGridView1, L"dataGridView1");
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
 			// panel1
 			// 
-			resources->ApplyResources(this->panel1, L"panel1");
 			this->panel1->BackColor = System::Drawing::Color::LightGray;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->panel1->Controls->Add(this->button2);
@@ -258,20 +257,21 @@ namespace GraduateWork {
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label1);
+			resources->ApplyResources(this->panel1, L"panel1");
 			this->panel1->Name = L"panel1";
 			// 
 			// button2
 			// 
-			resources->ApplyResources(this->button2, L"button2");
 			this->button2->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			resources->ApplyResources(this->button2, L"button2");
 			this->button2->Name = L"button2";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// button1
 			// 
-			resources->ApplyResources(this->button1, L"button1");
 			this->button1->BackColor = System::Drawing::Color::RosyBrown;
+			resources->ApplyResources(this->button1, L"button1");
 			this->button1->Name = L"button1";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
@@ -286,8 +286,8 @@ namespace GraduateWork {
 			// 
 			// pictureBox1
 			// 
-			resources->ApplyResources(this->pictureBox1, L"pictureBox1");
 			this->pictureBox1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			resources->ApplyResources(this->pictureBox1, L"pictureBox1");
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->TabStop = false;
 			// 
@@ -298,8 +298,8 @@ namespace GraduateWork {
 			// 
 			// numericUpDown4
 			// 
-			resources->ApplyResources(this->numericUpDown4, L"numericUpDown4");
 			this->numericUpDown4->DecimalPlaces = 8;
+			resources->ApplyResources(this->numericUpDown4, L"numericUpDown4");
 			this->numericUpDown4->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 327680 });
 			this->numericUpDown4->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 983040 });
 			this->numericUpDown4->Name = L"numericUpDown4";
@@ -354,15 +354,14 @@ namespace GraduateWork {
 			// 
 			// panel2
 			// 
-			resources->ApplyResources(this->panel2, L"panel2");
 			this->panel2->BackColor = System::Drawing::Color::DarkGray;
 			this->panel2->Controls->Add(this->groupBox2);
 			this->panel2->Controls->Add(this->groupBox1);
+			resources->ApplyResources(this->panel2, L"panel2");
 			this->panel2->Name = L"panel2";
 			// 
 			// groupBox2
 			// 
-			resources->ApplyResources(this->groupBox2, L"groupBox2");
 			this->groupBox2->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->groupBox2->Controls->Add(this->label25);
 			this->groupBox2->Controls->Add(this->label24);
@@ -375,37 +374,38 @@ namespace GraduateWork {
 			this->groupBox2->Controls->Add(this->label14);
 			this->groupBox2->Controls->Add(this->label15);
 			this->groupBox2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			resources->ApplyResources(this->groupBox2, L"groupBox2");
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->TabStop = false;
 			// 
 			// label25
 			// 
-			resources->ApplyResources(this->label25, L"label25");
 			this->label25->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label25, L"label25");
 			this->label25->Name = L"label25";
 			// 
 			// label24
 			// 
-			resources->ApplyResources(this->label24, L"label24");
 			this->label24->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label24, L"label24");
 			this->label24->Name = L"label24";
 			// 
 			// label23
 			// 
-			resources->ApplyResources(this->label23, L"label23");
 			this->label23->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label23, L"label23");
 			this->label23->Name = L"label23";
 			// 
 			// label22
 			// 
-			resources->ApplyResources(this->label22, L"label22");
 			this->label22->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label22, L"label22");
 			this->label22->Name = L"label22";
 			// 
 			// label21
 			// 
-			resources->ApplyResources(this->label21, L"label21");
 			this->label21->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label21, L"label21");
 			this->label21->Name = L"label21";
 			// 
 			// label11
@@ -435,7 +435,6 @@ namespace GraduateWork {
 			// 
 			// groupBox1
 			// 
-			resources->ApplyResources(this->groupBox1, L"groupBox1");
 			this->groupBox1->BackColor = System::Drawing::Color::RosyBrown;
 			this->groupBox1->Controls->Add(this->label20);
 			this->groupBox1->Controls->Add(this->label19);
@@ -448,38 +447,39 @@ namespace GraduateWork {
 			this->groupBox1->Controls->Add(this->label7);
 			this->groupBox1->Controls->Add(this->label6);
 			this->groupBox1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			resources->ApplyResources(this->groupBox1, L"groupBox1");
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
 			// 
 			// label20
 			// 
-			resources->ApplyResources(this->label20, L"label20");
 			this->label20->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label20, L"label20");
 			this->label20->Name = L"label20";
 			// 
 			// label19
 			// 
-			resources->ApplyResources(this->label19, L"label19");
 			this->label19->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label19, L"label19");
 			this->label19->Name = L"label19";
 			// 
 			// label18
 			// 
-			resources->ApplyResources(this->label18, L"label18");
 			this->label18->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label18, L"label18");
 			this->label18->Name = L"label18";
 			// 
 			// label17
 			// 
-			resources->ApplyResources(this->label17, L"label17");
 			this->label17->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label17, L"label17");
 			this->label17->Name = L"label17";
 			// 
 			// label16
 			// 
-			resources->ApplyResources(this->label16, L"label16");
 			this->label16->BackColor = System::Drawing::Color::LightGray;
+			resources->ApplyResources(this->label16, L"label16");
 			this->label16->Name = L"label16";
 			// 
 			// label10
@@ -515,8 +515,8 @@ namespace GraduateWork {
 			// 
 			// MyForm
 			// 
-			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			resources->ApplyResources(this, L"$this");
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->Controls->Add(this->tabControl1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
