@@ -131,14 +131,10 @@ namespace GraduateWork {
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->numericUpDown5 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -174,6 +170,10 @@ namespace GraduateWork {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
+			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
@@ -181,8 +181,6 @@ namespace GraduateWork {
 			this->groupBox3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel1->SuspendLayout();
-			this->groupBox6->SuspendLayout();
-			this->groupBox5->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->BeginInit();
@@ -192,6 +190,8 @@ namespace GraduateWork {
 			this->panel2->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			this->groupBox5->SuspendLayout();
+			this->groupBox6->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -274,30 +274,20 @@ namespace GraduateWork {
 			resources->ApplyResources(this->panel1, L"panel1");
 			this->panel1->Name = L"panel1";
 			// 
-			// groupBox6
+			// button4
 			// 
-			this->groupBox6->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->groupBox6->Controls->Add(this->button6);
-			this->groupBox6->Controls->Add(this->button5);
-			this->groupBox6->Controls->Add(this->button2);
-			resources->ApplyResources(this->groupBox6, L"groupBox6");
-			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->TabStop = false;
+			this->button4->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button4, L"button4");
+			this->button4->Name = L"button4";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
-			// button6
+			// button3
 			// 
-			this->button6->BackColor = System::Drawing::SystemColors::Menu;
-			resources->ApplyResources(this->button6, L"button6");
-			this->button6->Name = L"button6";
-			this->button6->UseVisualStyleBackColor = false;
-			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
-			// 
-			// button5
-			// 
-			this->button5->BackColor = System::Drawing::SystemColors::Menu;
-			resources->ApplyResources(this->button5, L"button5");
-			this->button5->Name = L"button5";
-			this->button5->UseVisualStyleBackColor = false;
+			this->button3->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button3, L"button3");
+			this->button3->Name = L"button3";
+			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
@@ -307,16 +297,6 @@ namespace GraduateWork {
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
-			// groupBox5
-			// 
-			this->groupBox5->BackColor = System::Drawing::Color::RosyBrown;
-			this->groupBox5->Controls->Add(this->button1);
-			this->groupBox5->Controls->Add(this->button3);
-			this->groupBox5->Controls->Add(this->button4);
-			resources->ApplyResources(this->groupBox5, L"groupBox5");
-			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->TabStop = false;
-			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::RosyBrown;
@@ -324,21 +304,6 @@ namespace GraduateWork {
 			this->button1->Name = L"button1";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::SystemColors::Menu;
-			resources->ApplyResources(this->button3, L"button3");
-			this->button3->Name = L"button3";
-			this->button3->UseVisualStyleBackColor = false;
-			// 
-			// button4
-			// 
-			this->button4->BackColor = System::Drawing::SystemColors::Menu;
-			resources->ApplyResources(this->button4, L"button4");
-			this->button4->Name = L"button4";
-			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// numericUpDown5
 			// 
@@ -577,6 +542,40 @@ namespace GraduateWork {
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
+			// groupBox5
+			// 
+			this->groupBox5->BackColor = System::Drawing::Color::RosyBrown;
+			this->groupBox5->Controls->Add(this->button1);
+			this->groupBox5->Controls->Add(this->button3);
+			this->groupBox5->Controls->Add(this->button4);
+			resources->ApplyResources(this->groupBox5, L"groupBox5");
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->TabStop = false;
+			// 
+			// groupBox6
+			// 
+			this->groupBox6->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->groupBox6->Controls->Add(this->button6);
+			this->groupBox6->Controls->Add(this->button5);
+			this->groupBox6->Controls->Add(this->button2);
+			resources->ApplyResources(this->groupBox6, L"groupBox6");
+			this->groupBox6->Name = L"groupBox6";
+			this->groupBox6->TabStop = false;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button5, L"button5");
+			this->button5->Name = L"button5";
+			this->button5->UseVisualStyleBackColor = false;
+			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::SystemColors::Menu;
+			resources->ApplyResources(this->button6, L"button6");
+			this->button6->Name = L"button6";
+			this->button6->UseVisualStyleBackColor = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -597,8 +596,6 @@ namespace GraduateWork {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
-			this->groupBox6->ResumeLayout(false);
-			this->groupBox5->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown4))->EndInit();
@@ -610,6 +607,8 @@ namespace GraduateWork {
 			this->groupBox2->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox6->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -621,12 +620,7 @@ namespace GraduateWork {
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	
-	if (button3->Enabled == false && button4->Enabled == false) {
-		button3->Enabled = true;
-		button4->Enabled = true;
-	}
-	
+
 
 	//X and Y Dimension 
 	size_t n = Convert::ToInt32(numericUpDown1->Text);
@@ -806,11 +800,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	if (button5->Enabled == false && button6->Enabled == false) {
-		button5->Enabled = true;
-		button6->Enabled = true;
-	}
-
 	//X and Y Dimension 
 	size_t n = Convert::ToInt32(numericUpDown1->Text);
 	size_t m = Convert::ToInt32(numericUpDown2->Text);
@@ -938,9 +927,6 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) 
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	system("python show_plot.py");
-}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-
 }
 };
 
