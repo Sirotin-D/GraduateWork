@@ -7,6 +7,9 @@
 #include <cmath>
 #include <limits>
 
+#define PI 3.141592653589793238462643383279502884197169399375105820974944
+
+
 using namespace std;
 
 using matrix = vector<vector<double>>;
@@ -14,6 +17,10 @@ using matrix = vector<vector<double>>;
 
 double ExactSolution(double _x, double _y) {
 	return exp(1 - pow(_x, 2) - pow(_y, 2));
+}
+
+double getLambdaMin(double h, double k, size_t n, size_t m) {
+	return 4.0 / h / h * sin(PI / 2.0 / n) * sin(PI / 2.0 / n) + 4.0 / k / k * sin(PI / 2.0 / m) * sin(PI / 2.0 / m);
 }
 
 double mu1(double y)
@@ -37,18 +44,53 @@ double mu4(double x)
 	return exp(-pow(x, 2));
 }
 
-// Laplasian with sign "-"
-double Laplas(double _x, double _y)
+// Right side with sign "-"
+double RightSide(double _x, double _y)
 {
 	return -4 * (1 - pow(_x, 2) - pow(_y, 2)) * exp(1 - pow(_x, 2) - pow(_y, 2));
 }
 
+
+double СhebyshevNorma(matrix& matr) {
+	double max = 0;
+	for (int j = 0; j < matr.size(); j++) {
+		for (int i = 0; i < matr[0].size(); i++) {
+			if (matr[j][i] > max) {
+				max = matr[j][i];
+			}
+		}
+	}
+	return max;
+}
+
+void SetBorders(matrix& V, double h, double k, int a, int c, size_t n, size_t m) {
+
+
+	for (int i = 0; i < m + 1; i++) {
+		V[i][0] = mu1(c + i * k);
+	}
+
+	for (int i = 0; i < m + 1; i++) {
+		V[i][n] = mu2(c + i * k);
+	}
+
+	for (int i = 0; i < n + 1; i++) {
+		V[0][i] = mu3(a + i * h);
+	}
+
+	for (int i = 0; i < n + 1; i++) {
+		V[m][i] = mu4(a + i * h);
+	}
+
+}
+
+
 matrix calcDiscreapancy(matrix& r, const matrix& V, double param_x, double param_y, double A, int a, int b, int c, int d, size_t n, size_t m) {
 	double h = (b - a) / (double)n;
 	double k = (d - c) / (double)m;
-	for (int i = 1; i < m; i++) {
-		for (int j = 1; j < n; j++) {
-			r[i - 1][j - 1] = V[i][j] * A + (V[i][j + 1] + V[i][j - 1]) / param_x + (V[i + 1][j] + V[i - 1][j]) / param_y + Laplas(a + j * h, c + i * k);
+	for (int j = 1; j < m; j++) {
+		for (int i = 1; i < n; i++) {
+			r[j][i] = V[j][i] * A + (V[j][i + 1] + V[j][i - 1]) / param_x + (V[j + 1][i] + V[j - 1][i]) / param_y + RightSide(a + i * h, c + j * k);
 		}
 	}
 	return r;
@@ -57,36 +99,30 @@ matrix calcDiscreapancy(matrix& r, const matrix& V, double param_x, double param
 
 matrix calcAh(matrix& H, matrix& r, double A, double param_x, double param_y, size_t n, size_t m) {
 	matrix Ah;
-	Ah.assign(m, vector<double>(n));
-	for (int i = 1; i < r.size(); i++) {
-		for (int j = 1; j < r[0].size(); j++) {
-			Ah[i - 1][j - 1] = A * H[i - 1][j - 1] + (H[i - 1][j] + H[i - 1][j]) / param_x + (H[i][j - 1] + H[i][j - 1]) / param_y; // (A,h)			
+	Ah.assign(m + 1, vector<double>(n + 1));
+	for (int j = 1; j < m; j++) {
+		for (int i = 1; i < n; i++) {
+			Ah[j][i] = A * H[j][i] + (H[j][i - 1] + H[j][i + 1]) / param_x + (H[j - 1][i] + H[j + 1][i]) / param_y; // (A,h)			
 		}
 	}
 	return Ah;
 }
 
-double calcAhh(matrix& Ah, matrix& r) {
+double calcAhh(matrix& Ah, matrix& r, size_t n, size_t m) {
 	double temp = 0;
-	/*
-	for (int i = 1; i < r.size(); i++) {
-		for (int j = 1; j < r[0].size(); j++) {
-			temp += Ah[i - 1][j - 1] * r[i - 1][j - 1];// (Ah,h)
-		}
-	}*/
-	for (int i = 0; i < r.size(); i++) {
-		for (int j = 0; j < r[0].size(); j++) {
-			temp += Ah[i][j] * r[i][j];// (Ah,h)
+	for (int j = 1; j < m; j++) {
+		for (int i = 1; i < n; i++) {
+			temp += Ah[j][i] * r[j][i];// (Ah,h)
 		}
 	}
 	return temp;
 }
 
 
-matrix calcH(matrix& H, matrix& r, double betta) {
-	for (int i = 1; i < H.size(); i++) {
-		for (int j = 1; j < H[0].size(); j++) {
-			H[i - 1][j - 1] = r[i - 1][j - 1] * (-1) + H[i - 1][j - 1] * betta; // h^(s) = betta * h^(s-1) - r^(s)
+matrix calcH(matrix& H, matrix& r, double betta, size_t n, size_t m) {
+	for (int j = 1; j < m; j++) {
+		for (int i = 1; i < n; i++) {
+			H[j][i] = r[j][i] * (-1) + H[j][i] * betta; // h^(s) = betta * h^(s-1) - r^(s)
 		}
 	}
 	return  H;
@@ -96,67 +132,27 @@ matrix calcH(matrix& H, matrix& r, double betta) {
 double calcAlpha(matrix& H, matrix& r, double param_x, double param_y, double A, double& Ahh, size_t n, size_t m) {
 
 	double temp = 0, betta = 0, alpha = 0;
+	// начало второго пункта
 	matrix Ah = calcAh(H, r, A, param_x, param_y, n, m);
 
-	/*
-		Ah.assign(m, vector<double>(n));
-		for (int i = 1; i < r.size(); i++) {
-			for (int j = 1; j < r[0].size(); j++) {
-				Ah[i - 1][j - 1] = A * H[i - 1][j - 1] + (H[i - 1][j] + H[i - 1][j]) / param_x + (H[i][j - 1] + H[i][j - 1]) / param_y; // (A,h)
-			}
-		}
+	temp = calcAhh(Ah, r, n, m); // 
 
+	betta = temp / Ahh; // Конец второго пункта
 
+	//Начало третьего пункта
+	H = calcH(H, r, betta, n, m);
+	//Конец третьего пункта
 
-		for (int i = 1; i < r.size(); i++) {
-			for (int j = 1; j < r[0].size(); j++) {
-				temp += Ah[i-1][j-1] * r[i - 1][j - 1];// (Ah,h)
-			}
-		}
-
-
-
-		for (int i = 1; i < H.size(); i++) {
-			for (int j = 1; j < H[0].size(); j++) {
-				H[i - 1][j - 1] = r[i - 1][j - 1] * (-1) + H[i - 1][j - 1] * betta; // h^(s) = betta * h^(s-1) - r^(s)
-			}
-		}
-
-			for (int i = 1; i < H.size(); i++) {
-			for (int j = 1; j < H[0].size(); j++) {
-				Ah[i - 1][j - 1] = A * H[i - 1][j - 1] + (H[i - 1][j] + H[i - 1][j]) / param_x + (H[i][j - 1] + H[i][j - 1]) / param_y; // (A,h)
-
-			}
-		}
-		*/
-
-	temp = calcAhh(Ah, r); // 
-
-	betta = temp / Ahh;
-	H = calcH(H, r, betta);
-
-
+	//Начало четвёртого пункта
 	Ahh = 0; temp = 0;
 
 	Ah = calcAh(H, r, A, param_x, param_y, n, m);
 
-	Ahh = calcAhh(Ah, H);
-	/*
-		for (int i = 1; i < H.size(); i++) {
-			for (int j = 1; j < H[0].size(); j++) {
-				Ahh += Ah[i - 1][j - 1] * H[i - 1][j - 1]; // Ah^(s) * h^(s)
-			}
-		}
+	Ahh = calcAhh(Ah, H, n, m);
 
-
-		for (int i = 1; i < H.size(); i++) {
-			for (int j = 1; j < H[0].size(); j++) {
-				temp += r[i - 1][j - 1] * H[i - 1][j - 1];
-			}
-		}*/
-
-	temp = calcAhh(r, H);
+	temp = calcAhh(r, H, n, m);
 	alpha = -temp / Ahh;
+	//Конец четвёртого пункта
 
 	return alpha;
 
@@ -175,4 +171,9 @@ double calcError(matrix V, double h, double k, int a, int c) {
 	}
 
 	return max_error;
+}
+
+double getSLAEAccuracySolution(double Disc_max, double h, double k, size_t n, size_t m) {
+	double lambdamin = getLambdaMin(h, k, n, m);
+	return Disc_max * sqrt((n - 1) * (m - 1)) / lambdamin;
 }
