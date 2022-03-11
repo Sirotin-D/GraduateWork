@@ -1,0 +1,3 @@
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\x64\Debug\GraduateWork.vcxproj.AssemblyReference.cache
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\x64\Debug\GraduateWork.MyForm.resources
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\x64\Debug\GraduateWork.vcxproj.GenerateResource.cache
