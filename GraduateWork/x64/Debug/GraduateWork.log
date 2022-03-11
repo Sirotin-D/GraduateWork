@@ -1,0 +1,18 @@
+﻿  MyForm.cpp
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\ParallelAlgorithm.h(10,29): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\ParallelAlgorithm.h(25,29): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\ParallelAlgorithm.h(39,29): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\ParallelAlgorithm.h(51,29): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\ParallelAlgorithm.h(63,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(848,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(849,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(851,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(856,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(865,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(1003,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(1004,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(1006,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(1011,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Дмитрий\source\repos\GraduateWork\GraduateWork\MyForm.h(1020,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  GraduateWork.vcxproj -> C:\Users\Дмитрий\source\repos\GraduateWork\x64\Debug\GraduateWork.exe
