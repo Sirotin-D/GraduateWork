@@ -8,7 +8,7 @@
 #include <limits>
 
 #define PI 3.141592653589793238462643383279502884197169399375105820974944
-
+constexpr auto BETHA = 1e-13;
 
 using namespace std;
 
@@ -55,13 +55,14 @@ double ÑhebyshevNorma(matrix& matr) {
 	double max = 0;
 	for (int j = 0; j < matr.size(); j++) {
 		for (int i = 0; i < matr[0].size(); i++) {
-			if (matr[j][i] > max) {
-				max = matr[j][i];
+			if (abs(matr[j][i]) > max) {
+				max = abs(matr[j][i]);
 			}
 		}
 	}
 	return max;
 }
+
 
 void SetBorders(matrix& V, double h, double k, int a, int c, size_t n, size_t m) {
 

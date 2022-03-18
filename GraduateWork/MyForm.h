@@ -1,6 +1,10 @@
 #pragma once
 #include "ParallelAlgorithm.h"
+#include "ResultMessageBox.h"
+#include "ProgressForm.h"
 #include <string>
+#include <chrono>
+#include <thread>
 namespace GraduateWork {
 
 	using namespace System;
@@ -15,6 +19,8 @@ namespace GraduateWork {
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+		ResultMessageBox^ resultMessage = gcnew ResultMessageBox;
+		ProgressForm^ progressForm = gcnew ProgressForm;
 	public:
 		MyForm(void)
 		{
@@ -115,6 +121,8 @@ namespace GraduateWork {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->label23 = (gcnew System::Windows::Forms::Label());
@@ -126,6 +134,8 @@ namespace GraduateWork {
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -159,10 +169,6 @@ namespace GraduateWork {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->label26 = (gcnew System::Windows::Forms::Label());
-			this->label27 = (gcnew System::Windows::Forms::Label());
-			this->label28 = (gcnew System::Windows::Forms::Label());
-			this->label29 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
@@ -267,6 +273,7 @@ namespace GraduateWork {
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::DarkGray;
+			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->panel2->Controls->Add(this->groupBox2);
 			this->panel2->Controls->Add(this->groupBox1);
 			this->panel2->Location = System::Drawing::Point(460, 0);
@@ -297,6 +304,28 @@ namespace GraduateWork {
 			this->groupBox2->TabIndex = 4;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Результаты работы параллельного алгоритма";
+			// 
+			// label29
+			// 
+			this->label29->BackColor = System::Drawing::Color::Gainsboro;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->label29->Location = System::Drawing::Point(198, 159);
+			this->label29->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(193, 24);
+			this->label29->TabIndex = 28;
+			this->label29->Text = L"     ";
+			this->label29->Visible = false;
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label28->Location = System::Drawing::Point(8, 159);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(162, 30);
+			this->label28->TabIndex = 27;
+			this->label28->Text = L"Погрешность решения\r\nСЛАУ";
 			// 
 			// label25
 			// 
@@ -432,6 +461,28 @@ namespace GraduateWork {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Результаты работы последовательного алгоритма";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// label27
+			// 
+			this->label27->BackColor = System::Drawing::Color::Gainsboro;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->label27->Location = System::Drawing::Point(198, 159);
+			this->label27->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(193, 24);
+			this->label27->TabIndex = 27;
+			this->label27->Text = L"     ";
+			this->label27->Visible = false;
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
+			this->label26->Location = System::Drawing::Point(8, 159);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(162, 30);
+			this->label26->TabIndex = 26;
+			this->label26->Text = L"Погрешность решения\r\nСЛАУ";
 			// 
 			// label20
 			// 
@@ -752,12 +803,12 @@ namespace GraduateWork {
 			this->numericUpDown3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.5F));
 			this->numericUpDown3->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
 			this->numericUpDown3->Location = System::Drawing::Point(249, 251);
-			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 30000, 0, 0, 0 });
-			this->numericUpDown3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 50, 0, 0, 0 });
+			this->numericUpDown3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 20000, 0, 0, 0 });
+			this->numericUpDown3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown3->Name = L"numericUpDown3";
 			this->numericUpDown3->Size = System::Drawing::Size(149, 22);
 			this->numericUpDown3->TabIndex = 6;
-			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
+			this->numericUpDown3->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			// 
 			// numericUpDown2
 			// 
@@ -765,11 +816,11 @@ namespace GraduateWork {
 			this->numericUpDown2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numericUpDown2->Location = System::Drawing::Point(249, 212);
 			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
-			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
+			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
 			this->numericUpDown2->Name = L"numericUpDown2";
 			this->numericUpDown2->Size = System::Drawing::Size(149, 22);
 			this->numericUpDown2->TabIndex = 5;
-			this->numericUpDown2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
+			this->numericUpDown2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 200, 0, 0, 0 });
 			// 
 			// numericUpDown1
 			// 
@@ -777,11 +828,11 @@ namespace GraduateWork {
 			this->numericUpDown1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numericUpDown1->Location = System::Drawing::Point(249, 181);
 			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
-			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
+			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(149, 22);
 			this->numericUpDown1->TabIndex = 4;
-			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
+			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 200, 0, 0, 0 });
 			// 
 			// label4
 			// 
@@ -833,56 +884,13 @@ namespace GraduateWork {
 			this->tabPage2->Text = L"Трёхмерный случай";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// label26
-			// 
-			this->label26->AutoSize = true;
-			this->label26->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label26->Location = System::Drawing::Point(8, 159);
-			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(162, 30);
-			this->label26->TabIndex = 26;
-			this->label26->Text = L"Погрешность решения\r\nСЛАУ";
-			// 
-			// label27
-			// 
-			this->label27->BackColor = System::Drawing::Color::Gainsboro;
-			this->label27->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
-			this->label27->Location = System::Drawing::Point(198, 159);
-			this->label27->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(193, 24);
-			this->label27->TabIndex = 27;
-			this->label27->Text = L"     ";
-			this->label27->Visible = false;
-			// 
-			// label28
-			// 
-			this->label28->AutoSize = true;
-			this->label28->Font = (gcnew System::Drawing::Font(L"Georgia", 9, System::Drawing::FontStyle::Bold));
-			this->label28->Location = System::Drawing::Point(8, 159);
-			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(162, 30);
-			this->label28->TabIndex = 27;
-			this->label28->Text = L"Погрешность решения\r\nСЛАУ";
-			// 
-			// label29
-			// 
-			this->label29->BackColor = System::Drawing::Color::Gainsboro;
-			this->label29->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
-			this->label29->Location = System::Drawing::Point(198, 159);
-			this->label29->Margin = System::Windows::Forms::Padding(5, 0, 5, 0);
-			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(193, 24);
-			this->label29->TabIndex = 28;
-			this->label29->Text = L"     ";
-			this->label29->Visible = false;
-			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1320, 916);
 			this->Controls->Add(this->tabControl1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MyForm";
 			this->Text = L"Задача Дирихле для уравнения Пуассона МСГ, последовательная и параллельная реализ"
 				L"ация";
@@ -927,9 +935,13 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 		message += "Достигнутая точность метода =  " + accuracy + "\n\n";
 		message += "Чебышевская норма невязки СЛАУ: ||r|| = " + discMax + "\n\n";
 		message += "Общая погрешность задачи: " + error + "\n\n";
-		message += "Общее время выполнения итерационного процесса: " + serialtime + " секунд\n\n";
-		MessageBox::Show(message, "Результаты решения тестовой задачи", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		message += "Общее время выполнения итерационного процесса: \n" + serialtime + " секунд\n\n";
+
+		resultMessage->Show();
+		resultMessage->label1->Text = message;
+
 	}
+
 
 	private: void DisplayParallelAlgorithmResultOnMessageBox(int stepcount, double accuracy, double discMax, double error, double paralleltime) {
 		String^ message;
@@ -941,8 +953,10 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 		message += "Достигнутая точность метода = " + accuracy + "\n\n";
 		message += "Чебышевская норма невязки СЛАУ: ||r|| = " + discMax + "\n\n";
 		message += "Общая погрешность задачи: " + error + "\n\n";
-		message += "Общее время выполнения итерационного процесса: " + paralleltime + " секунд\n\n";
-		MessageBox::Show(message, "Результаты решения тестовой задачи", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		message += "Общее время выполнения итерационного процесса: \n" + paralleltime + " секунд\n\n";
+
+		resultMessage->Show();
+		resultMessage->label1->Text = message;
 	}
 
 	private: double ModifiedSetPresision(double value, int presision) {
@@ -990,9 +1004,18 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 			button3->Enabled = true;
 		}
 	}
+
+		   public: void function(int &Nmax) {
+			   progressForm->progressBar1->Value = Nmax;
+			   this_thread::sleep_for(chrono::milliseconds(5000));
+		   }
+	
+	
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	enableButtons(button3, button4, button5);
+	resultMessage->Hide();
+
 
 	size_t n = Convert::ToInt32(numericUpDown1->Text);
 	size_t m = Convert::ToInt32(numericUpDown2->Text);
@@ -1021,14 +1044,23 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	double eps_curr = 0;
 	double accuracy = 0;
 	double v_old;
-	double runtime = clock();
+	double Disc_max = 0;
+	bool ExactSol = false;
+	progressForm->Show();
+	progressForm->progressBar1->Value = 0;
+	progressForm->progressBar1->Maximum = max_step;
+	auto start = chrono::high_resolution_clock::now();
 	do
 	{
-		accuracy = 0;
+		
 		r = calcDiscreapancy(r, V, param_x, param_y, A, a, b, c, d, n, m);
-
+		Disc_max = СhebyshevNorma(r);
+		if (Disc_max < BETHA) {
+			ExactSol = true;
+			break;
+		}
 		alpha = calcAlpha(H, r, param_x, param_y, A, Ahh, n, m);
-
+		accuracy = 0;
 		for (int j = 1; j < m; j++) {
 			for (int i = 1; i < n; i++) {
 				v_old = V[j][i];
@@ -1041,13 +1073,26 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		}
 
 		step_count++;
+		progressForm->progressBar1->Value++;
 	} while ((accuracy > eps) && (step_count < max_step));
-	runtime = (clock() - runtime) / CLOCKS_PER_SEC;
+	auto end = chrono::high_resolution_clock::now();
 
-	r = calcDiscreapancy(r, V, param_x, param_y, A, a, b, c, d, n, m);
+	progressForm->progressBar1->Value = max_step;
 
-	double Disc_max = СhebyshevNorma(r);
+	chrono::duration <double> duration = end - start;
 
+	double runtime = duration.count();
+
+	if (ExactSol) {
+		String^ mess = "Норма невязки меньше параметра 1e-13\n Считается, что найдено точное решение разностной схемы";
+		MessageBox::Show(mess, "Найдено точное решение разностной схемы", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	else
+	{
+		r = calcDiscreapancy(r, V, param_x, param_y, A, a, b, c, d, n, m);
+		Disc_max = СhebyshevNorma(r);
+	}
+	
 	double error = calcError(V, h, k, a, c);
 
 
@@ -1084,6 +1129,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		}
 	}
 
+	progressForm->Hide();
 
 	DisplaySerialAlgorithmResultOnMessageBox(step_count, accuracy, Disc_max, error, runtime);
 
@@ -1124,16 +1170,25 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	double eps = Convert::ToDouble(numericUpDown4->Text);
 	double eps_curr = 0;
 	double accuracy = 0;
+	double Disc_max = 0;
 	double v_old;
+	bool ExactSol = false;
+	progressForm->Show();
+	progressForm->progressBar1->Value = 0;
+	progressForm->progressBar1->Maximum = max_step;
 	size_t num_threads = Convert::ToInt32(numericUpDown5->Text);
 	double parallelruntime = omp_get_wtime();
 	do
 	{
-		accuracy = 0;
+		
 		r = parallelCalcDiscrepancy(r, V, param_x, param_y, A, a, b, c, d, n, m, num_threads);
-
+		Disc_max = СhebyshevNorma(r);
+		if (Disc_max < BETHA) {
+			ExactSol = true;
+			break;
+		}
 		alpha = parallelCalcAlpha(H, r, param_x, param_y, A, Ahh, n, m, num_threads);
-
+		accuracy = 0;
 		for (int j = 1; j < m; j++) {
 			for (int i = 1; i < n; i++) {
 				v_old = V[j][i];
@@ -1146,12 +1201,23 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		}
 
 		step_count++;
+		progressForm->progressBar1->Value++;
 	} while ((accuracy > eps) && (step_count < max_step));
 	parallelruntime = omp_get_wtime() - parallelruntime;
 
-	r = parallelCalcDiscrepancy(r, V, param_x, param_y, A, a, b, c, d, n, m, num_threads);
+	progressForm->progressBar1->Value = max_step;
 
-	double Disc_max = СhebyshevNorma(r);
+	if (ExactSol) {
+		String^ mess = "Норма невязки меньше параметра 1e-13\n Считается, что найдено точное решение разностной схемы";
+		MessageBox::Show(mess, "Найдено точное решение разностной схемы", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	else
+	{
+		r = parallelCalcDiscrepancy(r, V, param_x, param_y, A, a, b, c, d, n, m, num_threads);
+		Disc_max = СhebyshevNorma(r);
+	}
+	
+
 
 	double error = calcError(V, h, k, a, c);
 
@@ -1187,6 +1253,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 			outfile << p << "\t" << e << "\t" << v_new << "\n";
 		}
 	}
+
+	progressForm->Hide();
 		
 	DisplayParallelAlgorithmResultOnMessageBox(step_count, accuracy, Disc_max, error, parallelruntime);
 }
