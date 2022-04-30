@@ -1,10 +1,10 @@
 #pragma once
 #include "ParallelAlgorithm.h"
+#include "SerialAlgorithm.h"
 #include "ResultMessageBox.h"
 #include "ProgressForm.h"
 #include <string>
 #include <chrono>
-#include <thread>
 namespace GraduateWork {
 
 	using namespace System;
@@ -815,7 +815,7 @@ namespace GraduateWork {
 			this->numericUpDown2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.5F));
 			this->numericUpDown2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numericUpDown2->Location = System::Drawing::Point(249, 212);
-			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1500, 0, 0, 0 });
 			this->numericUpDown2->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
 			this->numericUpDown2->Name = L"numericUpDown2";
 			this->numericUpDown2->Size = System::Drawing::Size(149, 22);
@@ -827,7 +827,7 @@ namespace GraduateWork {
 			this->numericUpDown1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.5F));
 			this->numericUpDown1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
 			this->numericUpDown1->Location = System::Drawing::Point(249, 181);
-			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
+			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1500, 0, 0, 0 });
 			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2, 0, 0, 0 });
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(149, 22);
@@ -959,12 +959,6 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 		resultMessage->label1->Text = message;
 	}
 
-	private: double ModifiedSetPresision(double value, int presision) {
-		value *= pow(10, presision + 1);
-
-		return double(int(value)) / pow(10, presision + 1);
-	}
-
 	private: void CreateChartDataGridView(System::Windows::Forms::DataGridView^ dataGridView, matrix& V, size_t n, size_t m, int a, int c, double h, double k) {
 		dataGridView->Rows->Clear();
 
@@ -1005,10 +999,6 @@ private: System::Void dataGridView1_CellContentClick(System::Object^ sender, Sys
 		}
 	}
 
-		   public: void function(int &Nmax) {
-			   progressForm->progressBar1->Value = Nmax;
-			   this_thread::sleep_for(chrono::milliseconds(5000));
-		   }
 	
 	
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1029,7 +1019,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	double param_y = -k * k;
 	double A = -2 * (1 / param_x + 1 / param_y);
 
-	matrix V, r, H;
+	matrix V, r, H, AH;
 	V.assign(m + 1, vector<double>(n + 1));
 	r.assign(m + 1, vector<double>(n + 1));
 	H.assign(m + 1, vector<double>(n + 1));
@@ -1059,7 +1049,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 			ExactSol = true;
 			break;
 		}
-		alpha = calcAlpha(H, r, param_x, param_y, A, Ahh, n, m);
+//		alpha = calcAlpha(H, r, param_x, param_y, A, step_count, Ahh, n, m);
+		double betta = calcBetta(H, r, AH, A, param_x, param_y, Ahh, n, m);
+		H = calcH(H, r, betta, n, m);
+		double alpha = calcAlpha(H, r, AH, param_x, param_y, A, Ahh, n, m);
 		accuracy = 0;
 		for (int j = 1; j < m; j++) {
 			for (int i = 1; i < n; i++) {
@@ -1084,7 +1077,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	double runtime = duration.count();
 
 	if (ExactSol) {
-		String^ mess = "Норма невязки меньше параметра 1e-13\n Считается, что найдено точное решение разностной схемы";
+		String^ mess = "Норма невязки меньше параметра BETHA\n Считается, что найдено точное решение разностной схемы";
 		MessageBox::Show(mess, "Найдено точное решение разностной схемы", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 	else
@@ -1109,14 +1102,18 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 	label16->Text = Convert::ToString(step_count);
 	label17->Text = Convert::ToString(accuracy);
+//	label17->Text = Convert::ToString(_trim_tail(accuracy, 4, 1));
 	label18->Text = Convert::ToString(error);
+//	label18->Text = Convert::ToString(_trim_tail(error, 4, 1));
 	label19->Text = Convert::ToString(Disc_max);
+//	label19->Text = Convert::ToString(_trim_tail(Disc_max, 4, 1));
 	label20->Text = Convert::ToString(runtime);
 	label27->Text = Convert::ToString(slaeAccuracySolution);
+//	label27->Text = Convert::ToString(_trim_tail(slaeAccuracySolution, 4, 1));
 
 
 
-	CreateChartDataGridView(dataGridView1, V, n, m, a, c, h, k);
+//	CreateChartDataGridView(dataGridView1, V, n, m, a, c, h, k);
 
 	double v_new;
 	ofstream file("out.txt");
@@ -1187,7 +1184,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 			ExactSol = true;
 			break;
 		}
-		alpha = parallelCalcAlpha(H, r, param_x, param_y, A, Ahh, n, m, num_threads);
+		alpha = parallelCalcAlpha(H, r, param_x, param_y, A, step_count, Ahh, n, m, num_threads);
 		accuracy = 0;
 		for (int j = 1; j < m; j++) {
 			for (int i = 1; i < n; i++) {
@@ -1236,12 +1233,16 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 	label21->Text = Convert::ToString(step_count);
 	label22->Text = Convert::ToString(accuracy);
+//	label22->Text = Convert::ToString(_trim_tail(accuracy, 4, 1));
 	label23->Text = Convert::ToString(error);
+//	label23->Text = Convert::ToString(_trim_tail(error, 4, 1));
 	label24->Text = Convert::ToString(Disc_max);
+//	label24->Text = Convert::ToString(_trim_tail(Disc_max, 4, 1));
 	label25->Text = Convert::ToString(parallelruntime);
 	label29->Text = Convert::ToString(slaeAccuracySolution);
+//	label29->Text = Convert::ToString(_trim_tail(slaeAccuracySolution, 4, 1));
 
-	CreateChartDataGridView(dataGridView2, V, n, m, a, c, h, k);
+//	CreateChartDataGridView(dataGridView2, V, n, m, a, c, h, k);
 
 	double v_new;
 	ofstream outfile("out_parallel.txt");
